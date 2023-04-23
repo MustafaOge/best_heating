@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "484107930819",
+    "project_id": "flutter-best-heating",
+    "storage_bucket": "flutter-best-heating.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484107930819:android:dbe130ef088d23047c2676",
+        "android_client_info": {
+          "package_name": "com.example.best_heating"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "484107930819-v6hbg09r540ikpdpi61ks1sl2l9d3ls6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgNegenQgrKRJLEV6pSV_E0kUKIqU6Sv8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "484107930819-v6hbg09r540ikpdpi61ks1sl2l9d3ls6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

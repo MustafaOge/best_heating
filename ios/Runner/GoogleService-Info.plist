@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>484107930819-p07lrd7blrqbgro3ioplqi00bo22mnom.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.484107930819-p07lrd7blrqbgro3ioplqi00bo22mnom</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA9aVkApmWPDuzDsyhNoeFGAukttx-Bwsg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>484107930819</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.bestHeating</string>
+	<key>PROJECT_ID</key>
+	<string>flutter-best-heating</string>
+	<key>STORAGE_BUCKET</key>
+	<string>flutter-best-heating.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:484107930819:ios:aff555de65ec1bfb7c2676</string>
+</dict>
+</plist>
