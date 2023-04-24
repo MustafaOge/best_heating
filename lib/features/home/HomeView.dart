@@ -4,14 +4,14 @@ import 'package:best_heating/product/widget/appBar.dart';
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 
-class MyWidget extends StatefulWidget {
-  const MyWidget({super.key});
+class HomeView extends StatefulWidget {
+  const HomeView({super.key});
 
   @override
-  State<MyWidget> createState() => _MyWidgetState();
+  State<HomeView> createState() => _HomeViewState();
 }
 
-class _MyWidgetState extends State<MyWidget> {
+class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

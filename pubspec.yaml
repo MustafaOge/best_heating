@@ -36,6 +36,8 @@ dependencies:
   #Firebase
   flutter_riverpod: ^2.3.5
   firebase_core: ^2.10.0
+  cloud_firestore: ^4.5.2
+  
 
 
   # The following adds the Cupertino Icons font to your application.

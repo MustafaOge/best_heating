@@ -138,7 +138,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 },
                                 child: const Text("Başla"),
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: ProjectColors.background,
+                                  backgroundColor: ProjectColors.buttonGrey,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(15),
                                   ),

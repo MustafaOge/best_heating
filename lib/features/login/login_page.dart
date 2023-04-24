@@ -1,3 +1,4 @@
+import 'package:best_heating/features/home/HomeView.dart';
 import 'package:best_heating/features/login/login_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -17,7 +18,17 @@ class _LoginViewState extends ConsumerState<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text(ref.watch(loginProvider).toString()),
+      body: Column(
+        children: [
+          Text(ref.watch(loginProvider).toString()),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => HomeView()));
+              },
+              child: Text("Giriş Yap"))
+        ],
+      ),
     );
   }
 }
