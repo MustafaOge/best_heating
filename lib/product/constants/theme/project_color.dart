@@ -11,5 +11,8 @@ class ProjectColors extends StatelessElement {
   static const Color cardTextGreen = Color(0xff77C095);
   static const Color cardTextGrey = Color(0xff77C095);
 
+  // App Bar
+  static const Color black = Color.fromARGB(255, 0, 0, 0);
+
   ProjectColors(super.widget);
 }
