@@ -19,6 +19,7 @@ class _HomeViewState extends State<HomeView> {
       body: SafeArea(
         child: Column(
           children: [
+            Text("this project changed"),
             CustomAppBarLogin(title: "title"),
             SafeArea(
                 child: Container(
