@@ -23,6 +23,7 @@ class _HomeViewState extends State<HomeView> {
             SafeArea(
                 child: Container(
               decoration: BoxDecoration(
+                color: Colors.transparent,
                 borderRadius: BorderRadius.circular(15),
               ),
               height: context.dynamicHeight(0.3),
@@ -30,10 +31,31 @@ class _HomeViewState extends State<HomeView> {
               child: Stack(
                 children: [
                   Positioned(
-                    top: context.dynamicHeight(0.06),
+                    top: context.dynamicHeight(0.050),
                     height: context.dynamicHeight(0.25),
                     width: context.dynamicWidth(0.9),
                     child: Container(
+                      child: Column(
+                        children: [
+                          Expanded(
+                              flex: 4,
+                              child: Container(
+                                color: Colors.blue,
+                              )),
+                          Expanded(
+                              flex: 6,
+                              child: Padding(
+                                padding: EdgeInsets.only(
+                                  left: context.dynamicHeight(0.02),
+                                  right: context.dynamicHeight(0.02),
+                                  bottom: context.dynamicHeight(0.02),
+                                ),
+                                child: Container(
+                                  color: Colors.red,
+                                ),
+                              ))
+                        ],
+                      ),
                       decoration: BoxDecoration(
                           color: ProjectColors.white,
                           borderRadius: BorderRadius.circular(15)),

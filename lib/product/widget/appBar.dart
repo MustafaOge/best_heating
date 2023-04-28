@@ -45,6 +45,7 @@ class CustomAppBarLogin extends StatelessWidget with PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      centerTitle: true,
       elevation: 0.0,
       backgroundColor: Colors.transparent,
       leading: InkWell(

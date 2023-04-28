@@ -13,7 +13,7 @@ class _EmptyPageState extends State<EmptyPage> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        appBar: AppBar(
+          appBar: AppBar(
           bottom: TabBar(
             tabs: [
               Tab(icon: Icon(Icons.fiber_manual_record)),

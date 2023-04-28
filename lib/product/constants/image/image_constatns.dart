@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class ImageConstants {
   ImageConstants._init();
   static ImageConstants? _instace;

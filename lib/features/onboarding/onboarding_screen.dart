@@ -86,7 +86,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         Text(
                           contents[i].title,
                           textAlign: TextAlign.center,
-                          maxLines: 2,
+                          maxLines: 3,
                           style: TextStyle(
                             fontFamily: "Mulish",
                             fontWeight: FontWeight.w600,
