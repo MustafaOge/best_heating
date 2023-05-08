@@ -1,4 +1,4 @@
-import 'package:best_heating/features/empty/emptyPage.dart';
+import 'package:best_heating/features/home/home_tab_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         ),
         routes: {
           'SplashScreen': (context) => SplashScreen(),
-          'emptyPageView': (context) => EmptyPage(),
+          //  'emptyPageView': (context) => EmptyPage(),
           'onBoardingPage': (context) => OnboardingScreen(),
           'loginPage': (context) => LoginView(),
           'homeView': (context) => HomeView(),

@@ -1,3 +1,4 @@
+import 'package:best_heating/features/home/home_tab_view.dart';
 import 'package:best_heating/features/home/HomeView.dart';
 import 'package:best_heating/features/login/login_provider.dart';
 import 'package:best_heating/product/constants/theme/project_color.dart';
@@ -5,6 +6,8 @@ import 'package:best_heating/product/widget/appBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:kartal/kartal.dart';
+
+import '../../product/widget/firebase_learn.dart';
 
 class LoginView extends ConsumerStatefulWidget {
   const LoginView({super.key});
@@ -60,7 +63,7 @@ class _LoginViewState extends ConsumerState<LoginView> {
                     ElevatedButton(
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => HomeView()));
+                            builder: (context) => HomeTabView()));
                       },
                       child: SizedBox(
                         width: double.infinity,
@@ -87,6 +90,7 @@ class _LoginViewState extends ConsumerState<LoginView> {
                   ],
                 ),
               ),
+              AddUser("Cadde Bostancı", "a", 4),
               Expanded(
                   flex: 1,
                   child: Align(

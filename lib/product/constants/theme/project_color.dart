@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ProjectColors extends StatelessElement {
+  // Genel
+  static const Color transparant = Colors.transparent;
+
   static const Color background = Color(0xfff6f6f6);
   static const Color white = Color(0xffffffff);
 
@@ -9,7 +12,7 @@ class ProjectColors extends StatelessElement {
 
   // Card
   static const Color cardTextGreen = Color(0xff77C095);
-  static const Color cardTextGrey = Color(0xff77C095);
+  static const Color cardTextGrey = Color(0xff979797);
 
   // App Bar
   static const Color black = Color.fromARGB(255, 0, 0, 0);

@@ -1,8 +1,13 @@
 import 'package:best_heating/product/constants/image/image_constatns.dart';
 import 'package:best_heating/product/constants/theme/project_color.dart';
 import 'package:best_heating/product/widget/appBar.dart';
+import 'package:best_heating/product/widget/card/modes_controller_card.dart';
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
+
+import '../../product/widget/card/blown_raident_card.dart';
+import '../../product/widget/firebase_learn.dart';
+import '../../product/widget/card/heater_custom_card.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -20,60 +25,10 @@ class _HomeViewState extends State<HomeView> {
         child: Column(
           children: [
             CustomAppBarLogin(appBarName: "title"),
-            SafeArea(
-                child: Container(
-              decoration: BoxDecoration(
-                color: Colors.transparent,
-                borderRadius: BorderRadius.circular(15),
-              ),
-              height: context.dynamicHeight(0.3),
-              width: context.dynamicWidth(0.9),
-              child: Stack(
-                children: [
-                  Positioned(
-                    top: context.dynamicHeight(0.050),
-                    height: context.dynamicHeight(0.25),
-                    width: context.dynamicWidth(0.9),
-                    child: Container(
-                      child: Column(
-                        children: [
-                          Expanded(
-                              flex: 4,
-                              child: Container(
-                                color: Colors.blue,
-                              )),
-                          Expanded(
-                              flex: 6,
-                              child: Padding(
-                                padding: EdgeInsets.only(
-                                  left: context.dynamicHeight(0.02),
-                                  right: context.dynamicHeight(0.02),
-                                  bottom: context.dynamicHeight(0.02),
-                                ),
-                                child: Container(
-                                  color: Colors.red,
-                                ),
-                              ))
-                        ],
-                      ),
-                      decoration: BoxDecoration(
-                          color: ProjectColors.white,
-                          borderRadius: BorderRadius.circular(15)),
-                    ),
-                  ),
-                  Positioned(
-                    //bottom: context.dynamicHeight(0.1),
-                    height: context.dynamicHeight(0.12),
-                    width: context.dynamicWidth(0.9),
-                    child: Image.asset(
-                      ImageConstants.instance.heaterRadient,
-                      //height: context.dynamicHeight(0.1),
-                      //width: context.dynamicWidth(0.1),
-                    ),
-                  ),
-                ],
-              ),
-            )),
+            BlownRadientCard(),
+            context.emptySizedHeightBoxLow2x,
+            NumberControllerButton()
+            // HeaterCustomCard(),
           ],
         ),
       ),

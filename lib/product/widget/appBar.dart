@@ -66,3 +66,35 @@ class CustomAppBarLogin extends StatelessWidget with PreferredSizeWidget {
   @override
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }
+
+class CustomAppBarHome extends StatelessWidget with PreferredSizeWidget {
+  CustomAppBarHome({
+    super.key,
+    required this.appBarName,
+  });
+  final String appBarName;
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      centerTitle: true,
+      elevation: 0.0,
+      backgroundColor: Colors.transparent,
+      leading: InkWell(
+        child: Icon(
+          Icons.chevron_left,
+          size: context.dynamicHeight(0.045),
+          color: ProjectColors.black,
+        ),
+        onTap: () => Navigator.pop(context),
+      ),
+      title: Text(
+        appBarName,
+        style: Theme.of(context).textTheme.titleLarge,
+      ),
+    );
+  }
+
+  @override
+  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+}
