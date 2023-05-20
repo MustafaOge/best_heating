@@ -5,14 +5,14 @@ import 'package:best_heating/product/constants/theme/project_color.dart';
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 
-class NumberControllerButton extends StatefulWidget {
-  const NumberControllerButton({super.key});
+class ModesControllerCard extends StatefulWidget {
+  const ModesControllerCard({super.key});
 
   @override
-  State<NumberControllerButton> createState() => _NumberControllerButtonState();
+  State<ModesControllerCard> createState() => _ModesControllerCardState();
 }
 
-class _NumberControllerButtonState extends State<NumberControllerButton> {
+class _ModesControllerCardState extends State<ModesControllerCard> {
   int _selectedButtonIndex = 0;
 
   @override

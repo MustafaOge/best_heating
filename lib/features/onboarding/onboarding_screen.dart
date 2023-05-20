@@ -1,4 +1,5 @@
 import 'package:best_heating/features/home/home_tab_view.dart';
+import 'package:best_heating/features/login/auth/auth_page.dart';
 import 'package:best_heating/features/login/login_page.dart';
 import 'package:best_heating/features/onboarding/size_config.dart';
 
@@ -159,43 +160,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               SizedBox(),
-                              // TextButton(
-                              //   onPressed: () {
-
-                              //     // _controller.jumpToPage(2);
-                              //   },
-                              //   child: const Text(
-                              //     "",
-                              //     style: TextStyle(color: Colors.black),
-                              //   ),
-                              //   style: TextButton.styleFrom(
-                              //     elevation: 0,
-                              //     textStyle: TextStyle(
-                              //       fontWeight: FontWeight.w600,
-                              //       fontSize: (width <= 550) ? 13 : 17,
-                              //     ),
-                              //   ),
-                              // ),
-                              // IconButton(
-                              //     onPressed: () {
-                              //       _controller.nextPage(
-                              //         duration:
-                              //             const Duration(milliseconds: 200),
-                              //         curve: Curves.easeIn,
-                              //       );
-                              //     },
-                              //     // style: IconButton.styleFrom(
-                              //     //   padding: (width <= 550)
-                              //     //       ? const EdgeInsets.symmetric(
-                              //     //           horizontal: 30, vertical: 20)
-                              //     //       : const EdgeInsets.symmetric(
-                              //     //           horizontal: 30, vertical: 25),
-                              //     // ),
-                              //     padding: EdgeInsets.zero,
-                              //     icon: Icon(Icons.chevron_right_sharp,
-                              //         color: Color.fromRGBO(4, 83, 220, 1),
-                              //         size: (width <= 550) ? 63 : 17))
-
                               InkWell(
                                 onTap: () {
                                   _controller.nextPage(

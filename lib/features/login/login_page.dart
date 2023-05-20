@@ -1,28 +1,32 @@
 import 'package:best_heating/features/home/home_tab_view.dart';
 import 'package:best_heating/features/home/HomeView.dart';
-import 'package:best_heating/features/login/login_provider.dart';
 import 'package:best_heating/product/constants/theme/project_color.dart';
 import 'package:best_heating/product/widget/appBar.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:kartal/kartal.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import '../../product/widget/firebase_learn.dart';
 
-class LoginView extends ConsumerStatefulWidget {
+FirebaseAuth auth = FirebaseAuth.instance;
+FirebaseApp secondaryApp = Firebase.app('SecondaryApp');
+
+class LoginView extends StatelessWidget {
   const LoginView({super.key});
 
   @override
-  ConsumerState<ConsumerStatefulWidget> createState() => _LoginViewState();
-}
-
-class _LoginViewState extends ConsumerState<LoginView> {
-  final loginProvider = StateNotifierProvider<LoginProvider, int>((ref) {
-    return LoginProvider();
-  });
-
-  @override
   Widget build(BuildContext context) {
+    //   FirebaseAuth.instance
+    // .authStateChanges()
+    // .listen((User? user) {
+    //   if (user == null) {
+    //     print('User is currently signed out!');
+    //   } else {
+    //     print('User is signed in!');
+    //   }
+    // });
     TextEditingController nameController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
     return Scaffold(
@@ -90,17 +94,31 @@ class _LoginViewState extends ConsumerState<LoginView> {
                   ],
                 ),
               ),
-              AddUser("Cadde Bostancı", "a", 4),
+              // AddUser("Cadde Bostancı", "a", 4),
               Expanded(
                   flex: 1,
                   child: Align(
                     alignment: Alignment.bottomCenter,
-                    child: TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Şifremi Unuttum",
-                        style: TextStyle(color: ProjectColors.buttonGrey),
-                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Şifremi Unuttum",
+                            style: TextStyle(color: ProjectColors.buttonGrey),
+                          ),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, 'firebaseAuth');
+                          },
+                          child: Text(
+                            "Kayıt Ol",
+                            style: TextStyle(color: ProjectColors.black),
+                          ),
+                        ),
+                      ],
                     ),
                   ))
             ],

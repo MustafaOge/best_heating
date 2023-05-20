@@ -24,10 +24,10 @@ class _HomeViewState extends State<HomeView> {
       body: SafeArea(
         child: Column(
           children: [
-            CustomAppBarLogin(appBarName: "title"),
+            CustomAppBarHome(appBarName: "Best Heating"),
             BlownRadientCard(),
             context.emptySizedHeightBoxLow2x,
-            NumberControllerButton()
+            ModesControllerCard()
             // HeaterCustomCard(),
           ],
         ),

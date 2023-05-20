@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'features/home/HomeView.dart';
+import 'features/login/auth/auth_page.dart';
 import 'features/login/login_page.dart';
 import 'features/onboarding/onboarding_screen.dart';
 import 'features/splash_page/splash_screen.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
           'onBoardingPage': (context) => OnboardingScreen(),
           'loginPage': (context) => LoginView(),
           'homeView': (context) => HomeView(),
+          'firebaseAuth': (context) => AuthPage(),
         },
         home: const Scaffold(
           resizeToAvoidBottomInset: false,
