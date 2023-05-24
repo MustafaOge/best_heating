@@ -1,4 +1,3 @@
-import 'package:best_heating/features/home/home_tab_view.dart';
 import 'package:best_heating/features/login/auth/auth_page.dart';
 import 'package:best_heating/features/login/login_page.dart';
 import 'package:best_heating/features/onboarding/size_config.dart';

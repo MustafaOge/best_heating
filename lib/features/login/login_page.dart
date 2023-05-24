@@ -1,14 +1,12 @@
-import 'package:best_heating/features/home/home_tab_view.dart';
-import 'package:best_heating/features/home/HomeView.dart';
 import 'package:best_heating/product/constants/theme/project_color.dart';
 import 'package:best_heating/product/widget/appBar.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:kartal/kartal.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../../product/widget/firebase_learn.dart';
+import '../home/home_tab_view.dart';
 
 FirebaseAuth auth = FirebaseAuth.instance;
 FirebaseApp secondaryApp = Firebase.app('SecondaryApp');
@@ -94,7 +92,7 @@ class LoginView extends StatelessWidget {
                   ],
                 ),
               ),
-              // AddUser("Cadde Bostancı", "a", 4),
+              AddUser("Sombahcem", "Mustafa", 4),
               Expanded(
                   flex: 1,
                   child: Align(

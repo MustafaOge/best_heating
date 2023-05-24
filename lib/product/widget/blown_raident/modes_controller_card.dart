@@ -4,6 +4,7 @@ import 'package:best_heating/features/onboarding/onboarding_contents.dart';
 import 'package:best_heating/product/constants/theme/project_color.dart';
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ModesControllerCard extends StatefulWidget {
   const ModesControllerCard({super.key});
@@ -12,8 +13,20 @@ class ModesControllerCard extends StatefulWidget {
   State<ModesControllerCard> createState() => _ModesControllerCardState();
 }
 
+CollectionReference users = FirebaseFirestore.instance.collection('users');
+
 class _ModesControllerCardState extends State<ModesControllerCard> {
   int _selectedButtonIndex = 0;
+  void sendDataToFirebase(int buttonNumber) {
+    FirebaseFirestore.instance.collection('buttonData').add({
+      'buttonNumber': buttonNumber,
+      'timestamp': Timestamp.now(),
+    }).then((value) {
+      print('Veri başarıyla Firestore\'a gönderildi!');
+    }).catchError((error) {
+      print('Hata oluştu: $error');
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +59,8 @@ class _ModesControllerCardState extends State<ModesControllerCard> {
       onPressed: () {
         setState(() {
           _selectedButtonIndex = modIndex;
+          sendDataToFirebase(modIndex); // Firebase'e veriyi gönder
+          print("$sendDataToFirebase(modIndex)");
         });
       },
       child: Text(modText),

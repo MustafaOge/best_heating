@@ -1,11 +1,15 @@
 import 'package:best_heating/product/constants/theme/project_color.dart';
-import 'package:best_heating/product/widget/card/heater_custom_card.dart';
+import 'package:best_heating/product/widget/radient/heater_custom_card.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
 import 'package:kartal/kartal.dart';
 
 import '../../product/widget/appBar.dart';
-import '../../product/widget/card/blown_raident_card.dart';
-import '../../product/widget/card/modes_controller_card.dart';
+import '../../product/widget/blown_raident/blown_raident_card.dart';
+import '../../product/widget/blown_raident/modes_auto_controller_card.dart';
+import '../../product/widget/blown_raident/modes_controller_card.dart';
+import 'controller/home_controller.dart';
 
 class HomeTabView extends StatefulWidget {
   const HomeTabView({Key? key}) : super(key: key);
@@ -17,7 +21,7 @@ class HomeTabView extends StatefulWidget {
 class _HomeTabViewState extends State<HomeTabView> {
   int _selectedTab = 0;
 
-  List _pages = [
+  List _blownRaidentPages = [
     Center(
         child: Column(
       children: [
@@ -29,8 +33,26 @@ class _HomeTabViewState extends State<HomeTabView> {
       ],
     )),
     Center(
-      child: Text("About"),
+      child: Column(
+        children: [
+          BlownRadientCard(),
+        ],
+      ),
     ),
+  ];
+  List radientHeaterPages = [
+    Center(
+      child: Column(
+        children: [
+          HeaterCustomCard(),
+        ],
+      ),
+    ),
+    Center(
+      child: Column(
+        children: [Text("Radyant Isıtıcı otomatik mod")],
+      ),
+    )
   ];
 
   _changeTab(int index) {
@@ -46,6 +68,7 @@ class _HomeTabViewState extends State<HomeTabView> {
     void _onItemTapped(int index) {
       setState(() {
         _selectedIndex = index;
+        Get.put(HomeController());
       });
     }
 
@@ -73,14 +96,16 @@ class _HomeTabViewState extends State<HomeTabView> {
           children: [
             Center(
               child: Scaffold(
-                body: _pages[_selectedTab],
+                body: _blownRaidentPages[_selectedTab],
                 bottomNavigationBar: customBottomNavigationBar(),
               ),
             ),
             Center(
-                child: Column(
-              children: [HeaterCustomCard()],
-            )),
+              child: Scaffold(
+                body: radientHeaterPages[_selectedTab],
+                bottomNavigationBar: customBottomNavigationBar(),
+              ),
+            ),
           ],
         ),
       ),
@@ -99,7 +124,7 @@ class _HomeTabViewState extends State<HomeTabView> {
         BottomNavigationBarItem(
             icon: Icon(
               Icons.settings_remote_outlined,
-              size: context.height * 0.04,
+              //  size: context.height * 0.04,
             ),
             label: "Manuel"),
         BottomNavigationBarItem(icon: Icon(Icons.sensors), label: "Otomatik"),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 
-import '../../../features/home/HomeView.dart';
 import '../../constants/image/image_constatns.dart';
 import '../../constants/theme/project_color.dart';
 import '../alert_dialog.dart';

@@ -1,8 +1,5 @@
-import 'package:best_heating/features/home/home_tab_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'features/home/HomeView.dart';
 import 'features/login/auth/auth_page.dart';
 import 'features/login/login_page.dart';
 import 'features/onboarding/onboarding_screen.dart';
@@ -12,7 +9,7 @@ import 'product/initialize/application_start.dart';
 
 Future<void> main() async {
   await ApplicationStart.init();
-  runApp(const ProviderScope(child: MyApp()));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -32,7 +29,7 @@ class MyApp extends StatelessWidget {
           //  'emptyPageView': (context) => EmptyPage(),
           'onBoardingPage': (context) => OnboardingScreen(),
           'loginPage': (context) => LoginView(),
-          'homeView': (context) => HomeView(),
+          // 'homeView': (context) => HomeView(),
           'firebaseAuth': (context) => AuthPage(),
         },
         home: const Scaffold(
